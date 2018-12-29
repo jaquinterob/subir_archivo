@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
     <meta charset="utf-8">
     <title>prueba</title>
   </head>
   <body>
-    <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
-
+    <form  action="" id="form_subir">
+      <input type="file" id="archivo" name="archivo" >
+      <br>
+      <br>
+      <span id="letrero">0%</span>
+      <br>
+      <br>
+      <span id="estado">Pediente</span>
+      <br>
+      <br>
+      <button type="cancelar" name="cancelar">Cancelar</button>
+      <button type="submit" name="enviar">Enviar</button>
+    </form>
+<script src="js/main.js" charset="utf-8"></script>
   </body>
 </html>
