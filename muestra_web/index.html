@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>EVA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link rel="stylesheet" href="estilo.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div id="paso1">
+    <br>
+    <div class="row">
+      <div class="col s12 m10 offset-m1 l6 offset-l3">
+        <div class="card">
+          <div class="card-content center-align">
+            <div class="card-title">Formulario de prueba</div>
+            <p>*recuerde completar todos los campos antes de continuar</p>
+            <div class="row">
+              <div class="input input-field col s8 offset-s2">
+                <input id="nombre" type="text" class="validate">
+                <label for="nombre">nombre</label>
+              </div>
+              <div class="input input-field col s8 offset-s2">
+                <input id="apellido" type="text" class="validate">
+                <label for="apellido">apellido</label>
+              </div>
+              <div class="input input-field col s8 offset-s2">
+                <input id="correo" type="text" class="validate">
+                <label for="correo">correo</label>
+              </div>
+              <div class="input input-field col s8 offset-s2">
+                <input id="celular" type="number" class="validate">
+                <label for="celular">celular</label>
+              </div>
+            </div>
+            <a class="btn-floating halfway-fab waves-effect waves-light blue" onclick="mandar_php()"><i class="material-icons">save</i></a>
+            <a style="margin-right:8%" class="btn-floating halfway-fab waves-effect waves-light blue" onclick="f_prueba_json()"><i class="material-icons">send</i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s6 offset-s3 center-align">
+        <a class="waves-effect waves-light btn" onclick="consultar()">consultar</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="paso2">
+    <br>
+    <div class="row">
+      <div class="col s12 m10 offset-m1  l6 offset-l3">
+        <div class="card">
+          <div class="card-content center-align">
+            <div class="card-title">Listado de contactos</div>
+            <p>A continuación se listan los contactos en contrados en la base de datos</p>
+            <br>
+            <div class="row">
+              <div class="center-align" style="margin:20px;" >
+                <table id="contenedor_contactos" class="highlight">
+                  <!-- se llena desde js-php-mysql-php-js -->
+                </table>
+              </div>
+              <a class="btn-floating halfway-fab waves-effect waves-light blue" onclick="atras()"><i class="material-icons">keyboard_backspace</i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="index.js" charset="utf-8"></script>
+  </html>
