@@ -1,18 +1,16 @@
 var jq = jQuery.noConflict();
 jq(document).ready(function() {
-
+inicialiaciones();
 });
 
-document.addEventListener('DOMContentLoaded',()=>{
-  let form=document.getElementById('form_subir');
-  form.addEventListener('submit',function(event) {
-    event.preventDefault();
+function inicialiaciones(){
+  jq("#form_subir").submit(function(e){
+    e.preventDefault();
     subir_archivo(this);
   });
-});
+}
 
 function subir_archivo(form){
-  let btn_cancelar=document.getElementById('cancelar');
   //petición
   let peticion= new XMLHttpRequest();
 
@@ -34,6 +32,10 @@ function subir_archivo(form){
   peticion.send(new FormData(form));
 
   // boton cancelar
-
-
+  jq("#cancelar").click(function(){
+    peticion.abort();
+    jq("#estado").text('Abotado');
+    alert('Abortado');
+    console.log('abortado');
+  });
 }

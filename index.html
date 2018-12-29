@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-    <meta charset="utf-8">
-    <title>prueba</title>
-  </head>
-  <body>
-    <form  action="" id="form_subir">
-      <input type="file" id="archivo" name="archivo" >
-      <br>
-      <br>
-      <span id="letrero">0%</span>
-      <br>
-      <br>
-      <span id="estado">Pediente</span>
-      <br>
-      <br>
-      <button type="cancelar" name="cancelar">Cancelar</button>
-      <button type="submit" name="enviar">Enviar</button>
-    </form>
-<script src="js/main.js" charset="utf-8"></script>
-  </body>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <meta charset="utf-8">
+  <title>prueba</title>
+</head>
+<body>
+  <div style='margin:50px' >
+    <div class="col s6 offset-s3 blue">
+      <form  action="" id="form_subir" >
+        <!-- <input type="file" id="archivo" name="archivo" > -->
+
+          <div class="file-field input-field">
+            <div class="btn">
+              <span>File</span>
+              <input type="file" id="archivo" name="archivo" >
+            </div>
+            <div class="file-path-wrapper">
+              <input  class="file-path validate" type="text">
+            </div>
+          </div>
+        <br>
+        <br>
+        <span id="letrero">0%</span>
+        <br>
+        <br>
+        <span id="estado">Pediente</span>
+        <br>
+        <br>
+        <button type="button" id="cancelar">Cancelar</button>
+        <button type="submit" name="enviar">Enviar</button>
+      </form>
+    </div>
+  </div>
+  <script src="js/main.js" charset="utf-8"></script>
+</body>
 </html>
