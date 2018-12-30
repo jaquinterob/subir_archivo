@@ -25,6 +25,7 @@ function subir_archivo(form){
   // finalizado
   peticion.addEventListener('load',() =>{
     jq("#estado").html('Completado');
+    consultar_tabla();
   });
 
   // enviar datos
@@ -37,5 +38,22 @@ function subir_archivo(form){
     jq("#estado").text('Abotado');
     alert('Abortado');
     console.log('abortado');
+  });
+}
+
+function consultar_tabla(){
+  let datosFormulario="token=1";
+  jq.ajax({
+    url:'includes/consulta_tabla_includes.php',
+    type:'POST',
+    data:datosFormulario,
+    error:function(jq,status,str_error){
+      M.toast({html:'error en la petición',classes:'red'});
+    },
+    timeout:10000,
+    success:function(data){
+      jq("#contenedor_tabla").html(data);
+      M.toast({html:'Si salió?',classes:'green'});
+    }
   });
 }
